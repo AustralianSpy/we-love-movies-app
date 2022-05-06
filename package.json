@@ -1,0 +1,25 @@
+{
+  "name": "welovemovies-mono-repo",
+  "version": "1.0.0",
+  "description": "Movie search engine server and front-end",
+  "scripts": {
+    "build": "npm -prefix welovemovies-frontend run build",
+    "preinstall": "cd ./welovemovies-backend-assessment && npm install",
+    "install": "cd ./welovemovies-frontend && npm install",
+    "start": "npx concurrently 'npm run start:welovemovies-backend-assessment' 'npm run start:welovemovies-frontend'",
+    "start:backend": "npm --prefix ./welovemovies-backend-assessment start",
+    "start:client": "npm --prefix ./welovemovies-frontend start",
+    "start:dev": "npx concurrently 'npm run start:dev --prefix ./welovemovies-backend-assessment' 'npm start --prefix ./welovemovies-frontend'",
+    "test": "npm run test:welovemovies-frontend && npm run test:welovemovies-backend-assessment"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AustralianSpy/we-love-movies-app.git"
+  },
+  "author": "Sydney W.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AustralianSpy/we-love-movies-app/issues"
+  },
+  "homepage": "https://github.com/AustralianSpy/we-love-movies-app#readme"
+}
